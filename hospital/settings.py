@@ -58,7 +58,7 @@ ROOT_URLCONF = 'hospital.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,6 +83,16 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
 #}
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}
+
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, 'dist/static'),
+]
 
 DATABASES = {
     'default': {
