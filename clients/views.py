@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from .models import Client
-from .serializers import ClientSerializer
+from clients.models import Client
+from clients.serializers import ClientSerializer
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
