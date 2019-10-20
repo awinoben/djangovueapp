@@ -40,7 +40,28 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'clients',
     'corsheaders',
+    'rest_framework.authtoken', 
+    'social_django',
+    'rest_social_auth',    
+    'oauth2_provider', 
+    'rest_framework_social_oauth2', 
+    'rest_framework_mongoengine',
 ]
+
+SOCIAL_AUTH_RAISE_EXCEPTIONS = True
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '76241932517-io5aulmoch4snc3iss89ejr8rs9kdgc2.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iXn4qKIcmJAArbWpdq4fznJ3'
+SOCIAL_AUTH_GOOGLE_OAUTH2_FIELDS = ['email', 'username']  # optionalCSRF_COOKIE_SECURE = True
+
+ROOT_URLCONF = '_main.urls'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+    'rest_framework_social_oauth2.backends.DjangoOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+    )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,7 +79,7 @@ ROOT_URLCONF = 'hospital.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'dist')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
