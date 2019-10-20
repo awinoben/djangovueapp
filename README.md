@@ -35,14 +35,14 @@ npm test
 # setup database connections:
 
 DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.postgresql_psycopg2',
-      'NAME': 'databasename',
-      'USER': 'databaseuser',
-      'PASSWORD': 'yourpassword',
-      'HOST': 'localhost',
-      'PORT': 22222,
-   }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hospital',
+        'USER': 'postgres',
+        'PASSWORD': 'databasepwd',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
 }
 
 
