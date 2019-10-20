@@ -32,7 +32,7 @@ export default new Router({
       path: "/index",
       name: "index",
       component: () => import("./components/Index.vue"),
-     // beforeEnter: (to, from, next) => {authMixin.methods.checkToken("google", next)}
+      //beforeEnter: (to, from, next) => {authMixin.methods.checkToken("google", next)}
       
     },
   ]
