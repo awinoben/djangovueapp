@@ -6,7 +6,7 @@
         <a class="btn btn-lg btn-primary" href="" role="button">View tutorial</a>
       </div>
 
-    <h4 v-if="!authenticated">
+    <h4>
       You are not logged in! Please <a class="btn btn-primary" @click="authenticate('google')">Log In</a> to continue.
     </h4>
     </main>

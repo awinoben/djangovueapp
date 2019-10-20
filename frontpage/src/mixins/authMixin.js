@@ -1,11 +1,8 @@
 import VueAxios from 'vue-axios'
 import axios from 'axios';
 import Vue from 'vue';
-import VueResource from 'vue-resource'
-
 
 Vue.use(VueAxios,axios);
-Vue.use(VueResource);
 
 export const authMixin = {
     methods: {

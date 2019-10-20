@@ -6,7 +6,7 @@ import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import * as VeeValidate from 'vee-validate';
-import VueResource from 'vue-resource'
+//import VueResource from 'vue-resource'
 import VueAuthenticate from 'vue-authenticate'
 import VueAxios from 'vue-axios'
 import axios from 'axios';
@@ -14,7 +14,7 @@ import axios from 'axios';
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(VeeValidate);
-Vue.use(VueResource);
+//Vue.use(VueResource);
 
 /* eslint-disable no-new */
 

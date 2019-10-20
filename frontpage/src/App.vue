@@ -5,11 +5,11 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
-          <router-link class="btn btn-sm btn-outline-primary" to="/index">Home</router-link>
+          <router-link class="btn btn-sm btn-outline-primary" to="/home">Home</router-link>
           </li>
           <li class="nav-item">
           <router-link class="btn btn-sm btn-outline-warning" to="/index">Records</router-link>
-          </li>
+          </li>s
           <li class="nav-item">
           <router-link to="/create" class="btn btn-sm btn-outline-success">New Record</router-link>
           </li>
