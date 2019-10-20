@@ -10,7 +10,7 @@ Vue.use(VueResource);
 export const authMixin = {
     methods: {
         checkToken: function(provider, redirect){
-            axios.post("http://localhost:8000/api/check/", {"token": localStorage.getItem("vue-authenticate.vueauth_token")}).then((response) => {
+            axios.post("http://localhost:8000/api/clients/", {"token": localStorage.getItem("vue-authenticate.vueauth_token")}).then((response) => {
                     var path = (response.data.status)? true : "/";
                     redirect({ path: path});
                 }).catch((error) => {
