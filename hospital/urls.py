@@ -18,9 +18,15 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.views.generic import TemplateView
 from clients import views
+from .views import check_token
 
 urlpatterns = [
     path('api/', include('clients.urls')),
     path('admin/', admin.site.urls),
     #url('', TemplateView.as_view(template_name='index.html')),
+    path('api/login/', include('rest_social_auth.urls_jwt')),
+    path('api/login/', include('rest_social_auth.urls_token')),
+    path('api/login/', include('rest_social_auth.urls_session')),
+    path('auth/', include('rest_framework_social_oauth2.urls')),
+    path('api/check/', check_token),
 ]
