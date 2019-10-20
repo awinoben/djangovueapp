@@ -159,7 +159,7 @@
                 </select>
             </div>
                       </form>
-                       <button class="btn btn-outline-primary4eaw" v-if="!this.client.pk" @click="createClient()" ><span v-if="!creating">Create</span><span v-if="creating">Creating... Please wait </span></button>
+                       <button class="btn btn-outline-primary" v-if="!this.client.pk" @click="createClient()" ><span v-if="!creating">Create</span><span v-if="creating">Creating... Please wait </span></button>
                        <button class="btn btn-primary" v-if="this.client.pk" @click="updateClient()" ><span v-if="!updating">Update</span><span v-if="updating">Updating... Please wait </span></button>
                     </div>
                 </div>
